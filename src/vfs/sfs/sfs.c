@@ -459,7 +459,7 @@ sfs_init (struct vfs_class *me)
         }
 
         c = semi + 1;
-        while (*c && (*c != ' ') && (*c != '\t'))
+        while (*c != '\0' && !whitespace (*c))
         {
             switch (*c)
             {
